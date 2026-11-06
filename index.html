@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+<meta name="theme-color" content="#101a1d">
+<meta name="description" content="Le Couvoir — survivras-tu à ta journée sans te faire prendre ?">
+<link rel="manifest" href="./manifest.webmanifest">
+<link rel="stylesheet" href="./styles.css">
+<title>Le Couvoir</title>
+<script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.187.0/build/three.module.js"}}</script>
+</head>
+<body>
+<main id="game-shell">
+<div id="scene"></div>
+<header class="topbar"><a class="brand" href="./"><span class="brand-mark">C</span><span>LE COUVOIR<small>Équipe du matin · 06:00</small></span></a><div class="shift"><span>FIN DE SERVICE</span><strong id="timer">03:00</strong></div></header>
+<section class="hud">
+<div class="hud-card"><span class="hud-label">AVERTISSEMENTS</span><div id="warnings" class="warning-dots"><i></i><i></i><i></i></div><small id="warning-text">Ne te fais pas remarquer.</small></div>
+<div class="hud-card"><span class="hud-label">DISCRÉTION</span><strong id="stealth">100%</strong><div class="meter"><i id="stealth-meter"></i></div></div>
+<div class="hud-card"><span class="hud-label">SCORE</span><strong id="score">0000</strong><small id="best">Record : 0000</small></div>
+</section>
+<div id="manager-alert" class="manager-alert"><b>!</b><span id="alert-message">Le responsable est dans le secteur !</span></div>
+<div class="location-pill" id="location">ZONE D'INCUBATION</div>
+<div class="controls">
+<div class="move-pad" id="move-pad"><div class="stick" id="stick"></div></div>
+<div class="action-buttons">
+<button id="hide-btn" class="action-btn"><span>▣</span><small>SE CACHER</small></button>
+<button id="work-btn" class="action-btn"><span>⌁</span><small>FAIRE SEMBLANT</small></button>
+<button id="noise-btn" class="action-btn"><span>↗</span><small>DISTRACTION</small></button>
+</div></div>
+<div id="start-screen" class="screen"><div class="intro-panel">
+<div class="eyebrow">SIMULATEUR DE SURVIE AU TRAVAIL</div><h1>LE<br><em>COUVOIR</em></h1>
+<p>Une journée entière à tenir. Le responsable rôde. À toi de gérer… ton effort.</p>
+<div class="briefing"><span>OBJECTIF</span><strong>Terminer ton service sans te faire virer.</strong><div class="briefing-row"><span>3 avertissements</span><span>→</span><b>Licenciement</b></div></div>
+<button id="start-btn" class="primary-btn">PRENDRE MON POSTE <span>→</span></button>
+<small class="hint">Joystick tactile ou ZQSD / WASD · Déplacement au clavier sur ordinateur</small>
+</div></div>
+<div id="end-screen" class="screen hidden"><div class="intro-panel end-panel">
+<div class="eyebrow" id="end-eyebrow">FIN DE SERVICE</div><h2 id="end-title">TU AS SURVÉCU !</h2><p id="end-copy">La journée est terminée.</p>
+<div class="final-score"><span>SCORE FINAL</span><strong id="final-score">0000</strong></div>
+<button id="restart-btn" class="primary-btn">RECOMMENCER <span>↻</span></button>
+</div></div>
+<div id="toast" class="toast"></div>
+</main>
+<script type="module" src="./game.js"></script>
+</body></html>
