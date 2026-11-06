@@ -1,0 +1,11 @@
+{
+  "name":"Le Couvoir",
+  "short_name":"Le Couvoir",
+  "description":"Survis à ta journée au couvoir sans te faire prendre.",
+  "start_url":"./",
+  "display":"standalone",
+  "background_color":"#101a1d",
+  "theme_color":"#101a1d",
+  "orientation":"landscape",
+  "icons":[]
+}
